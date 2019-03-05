@@ -1,5 +1,30 @@
-@import 'algolia';
+//@import 'algolia';
 
-.algolia-holder > form:nth-child(1) {
-  margin: 0;
+.with-topics .topics > div {
+  visibility: hidden;
 }
+
+.with-topics th.topics {
+  visibility: hidden;
+}
+
+.list-controls .category-breadcrumb li.bullet>.dropdown-header {
+  background: inherit;
+  color: #7c8a94;
+  padding: 0px 4px;
+}
+
+.list-controls .category-breadcrumb li.bullet>.dropdown-header:hover {
+  color: black;
+}
+
+//.category-breadcrumb li.bullet>.dropdown-header {
+//  background: inherit;
+//  color: #7c8a94;
+//  padding: 0px 4px;
+//}
+//
+//.category-breadcrumb li.bullet>.dropdown-header:hover {
+//  color: black;
+//}
+//
