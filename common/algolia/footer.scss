@@ -1,0 +1,32 @@
+.topic-list-bottom {
+
+  h3 {
+		font-weight: 400;
+
+    a {
+      color: $text-light;
+      background-color: #FFF;
+      border-bottom: 2px solid transparent;
+      transition:all linear .15s;
+
+      &:hover {
+        border-bottom: 2px solid #fe336f;
+      }
+    }
+
+    .top-title-buttons {
+    	
+    	button {
+    		color: $text-light;
+    		background-color: #FFF;
+      	border-bottom: 2px solid transparent;
+      	transition:all linear .15s;
+
+      	&:hover {
+        	border-bottom: 2px solid #fe336f;
+      	}
+    	}
+    }
+  }
+}
+

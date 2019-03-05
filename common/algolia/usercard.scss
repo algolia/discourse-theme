@@ -1,0 +1,209 @@
+#user-card {
+	box-shadow: 0 4px 8px 0 rgba(85, 95, 110, 0.2);
+	border: solid 1px #d4d8e3;
+	width: 340px !important;
+	border-radius: 3px;
+	background-color: #fbfbfb;
+	overflow: hidden;
+	transform:translate(0,15px);
+	transition: none;
+	opacity:0;
+
+	&.has-card-badge-image{
+		width: 420px !important;
+
+		.card-content{
+			padding: 16px 100px 16px 16px;
+		}
+	}
+
+	h2,
+	.bio,
+	.location-and-website .location { 
+		color:$text-light;
+		font-weight: 300;
+	}
+	.metadata{
+		.desc,
+		.date {
+			font-weight: 300;
+		}
+		.date {
+			color:$text-dark;
+		}
+	}
+
+	.location-and-website .website-name {
+		font-weight: 300;
+		color:$text-light;
+
+		a {
+			color:$royal-blue;
+		}
+	}
+
+	.card-badge{
+		position: absolute;
+		right:16px;
+		bottom:31px;
+		margin-right: 6px;
+		width: 80px;
+		height: 80px;
+		display: inline-block;
+		font-size: 100%;
+
+		img{
+			position: absolute;
+			height: auto;
+			width: 80px;
+			right:0;
+			bottom: 0;
+		}
+
+	}
+
+	&.show-badges .badge-section {
+		width:100%;
+
+		> span {
+			display: inline-block;
+			font-weight: 300;
+			margin-bottom: 5px;
+
+			a {
+				display: block;
+
+				> span {
+					color:$text-dark;
+					background-color: white !important;
+					margin-bottom:0;
+					border: 1px solid #d4d8e3 !important;
+				}
+			}
+		}
+	}
+
+	&.show {
+		transition: transform .25s ease, opacity .25s ease;
+		transform: translate(0,0);
+		opacity:1;
+	}
+
+	&.no-bg {
+
+		.card-content {
+			margin-top:108px;
+		}
+	}
+	
+	.user-card-avatar {
+		position: absolute;
+		left: 16px;
+		top: 6px;
+	}
+
+	.card-content {
+		padding: 16px;
+		position: relative;
+		margin-top:108px;
+		background-color: #FFF;
+
+		.avatar {
+			width:56px;
+			height:56px;
+		}
+	}
+
+	.badge-section:empty{
+		display: none;
+	}
+	
+	.names {
+		width: 100% !important;
+		height:auto !important;
+		float:none !important;
+
+		h1{
+			margin-top: 4px;
+			font-size: 16px;
+			font-weight: 600;
+			font-style: normal;
+			font-stretch: normal;
+			font-family: "Open Sans", sans-serif;
+			font-weight: 600;
+
+			a {
+				color: #3e464d;
+			}
+		}
+
+		span {
+			position: relative !important;
+			width: auto !important;
+			display: block !important;
+		}
+	}
+
+	.usercard-controls {
+		float: none;
+		position: absolute;
+		right:16px;
+		top:16px;
+		overflow: auto;
+
+		li {
+			float: left;
+
+			&:not(:first-child) {
+				margin-left: 3px;
+			}
+		}
+
+		a {
+			min-width: 0;
+			border-radius: 3px;
+			padding: 5px 12px;
+		}
+
+		li {
+
+			a.btn-message {
+				background-color: $message-blue;
+				background-image: url("data:image/svg+xml;utf8,<svg width=\'16\' height=\'13\' viewBox=\'0 0 16 13\' xmlns=\'http://www.w3.org/2000/svg\'><path d=\'M14.4 0H1.6C.72 0 .008.73.008 1.625L0 11.375C0 12.27.72 13 1.6 13h12.8c.88 0 1.6-.73 1.6-1.625v-9.75C16 .73 15.28 0 14.4 0zm0 3.25L8 7.313 1.6 3.25V1.625L8 5.688l6.4-4.063V3.25z\' fill=\'%23FFF\' fill-rule=\'evenodd\'/></svg>");
+				background-size: 16px 13px;
+				background-position: center;
+				background-repeat: no-repeat;
+				border-radius: 3px;
+				width: 36px;
+				height: 30px;
+			}
+
+			a.btn-filters {
+				background-color: #FFF;
+				color: $text-light;
+				border: 1px solid #d4d8e3;
+				box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0);
+
+				&:hover {
+					color: $text-dark;
+					box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+				}
+			}
+
+			a.btn-clearfilters{
+				color:$radical-red;
+				background-color: #FFF;
+				border: 1px solid #d4d8e3;
+				box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0);
+
+				&:hover{
+					box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+				}
+			}
+		}
+
+		.fa.fa-envelope{
+			display: none;
+		}
+	}
+}

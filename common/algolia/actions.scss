@@ -1,0 +1,18 @@
+.small-action {
+
+	&.deleted {
+		background-color: rgba($radical-red,.3);
+
+		.small-action-desc > p {
+			color:white;
+		}
+
+		.topic-avatar i {
+			color:white;
+		}
+
+		button {
+			color: white;
+		}
+	}
+}

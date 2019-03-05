@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+$text-light: #7c8a94;
+$text-dark: #3e464c;
+
+$shamrock: #2DDE98;
+$radical-red: #FF4F81;
+$royal-blue: #3369E7;
+$midnight-blue: #003666;
+
+$message-blue: #4c7ff6;
+
+html {
+	font-family: "Open Sans", sans-serif;
+}
+
+@mixin AlgLink() {
+	color:$text-light;
+	border-bottom: 2px solid #fe336f;
+	font-weight: 300;
+	transition: all 300ms ease;
+
+	&:hover {
+		color:#fe336f;
+		border-bottom: 2px solid transparent;
+		transform:translate(0,2px);
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+@mixin AlgBtn() {
+	color:$text-light;
+	padding: 9px 16px;
+	box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+	background-color: #FFF;
+	border: solid 1px #d4d8e3;
+	text-transform: uppercase;
+	font-size: 12px;
+	border-radius: 4px;
+
+	&:active {
+	  background-image: none;
+	  transform:scale(0.96);
+	}
+
+	&:focus {  
+		outline: none;
+	}
+}
+
+@mixin AlgInput {
+	color:$text-light;
+	padding: 9px 16px;
+	box-shadow: 0 1px 1px 0 transparent;
+	background-color: #FFF;
+	border: solid 1px #d4d8e3;
+	border-radius: 4px;
+	font-size:12px;
+
+	&:focus {
+		outline:none;
+		box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+	}
+}
+
+@mixin AlgLineInput{
+	color:$text-light;
+	padding: 9px 16px;
+	box-shadow: 0 1px 1px 0 transparent;
+	background-color: #FFF;
+	border-bottom: solid 1px #d4d8e3;
+	font-size:12px;
+
+	&:focus {
+		outline:none;
+		box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+	}
+}
+
+@import 'algolia/header';
+@import 'algolia/main';
+@import 'algolia/reply';
+@import 'algolia/topic';
+@import 'algolia/footer';
+@import 'algolia/login';
+@import 'algolia/modals';
+@import 'algolia/profile';
+@import 'algolia/admin';
+@import 'algolia/usercard';
+@import 'algolia/actions';
+@import 'algolia/categories';

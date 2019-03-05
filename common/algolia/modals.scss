@@ -1,0 +1,61 @@
+.modal-backdrop {
+	background-color: rgba(255,255,255,1);
+}
+
+.bootbox.modal{
+	border-radius:4px;
+	box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+	
+	.btn.btn-primary {
+		color: $text-light !important;
+		@include AlgBtn();
+	}
+
+	.btn.null {
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 20px;
+		background-color:transparent;
+		@include AlgLink();
+	}
+}
+
+.modal-inner-container{
+	border-radius: 4px;
+	box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+	border: 1px solid #d4d8e3;
+	padding: 10px 15px;
+
+	input[type="text"] {
+		@include AlgInput();
+
+		&:focus {
+			border-color: #d4d8e3;
+		}
+	}
+
+	.input-append {
+		input{
+			border-radius: 0 4px 4px 0;
+			border-left: 0;
+		}
+		.add-on {
+			padding: 0 5px;
+			line-height: 36px;
+			height:36px;
+			border-right:0;
+			border-radius: 4px 0 0 4px;
+			border-top: solid 1px #d4d8e3;
+			border-left: solid 1px #d4d8e3;
+			border-bottom: solid 1px #d4d8e3;
+		}
+	}
+
+	#save-category {
+		@include AlgBtn();
+	}
+}
+
+.modal .nav{
+	background-color: #FFF;
+}

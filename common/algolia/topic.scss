@@ -1,0 +1,209 @@
+#topic-footer-buttons {
+
+	button {
+		@include AlgBtn();
+	}
+
+	.flag-topic {
+		color:$radical-red;
+	}
+
+	.invite-topic {
+		color:$midnight-blue;
+	}
+
+	.widget-button.btn + .dropdown-menu {
+		bottom: auto;
+		background-color: #FFF;
+		padding: 0;
+
+		li a {
+			padding: 14px;
+		}
+
+		&:before,
+		&:after {
+		    content: " ";
+		    display: table;
+		}
+		&:after {
+    	clear: both;
+    }
+	}
+}
+
+.topic-admin-popup-menu {
+	border-radius: 4px;
+	box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+	border: 1px solid #d4d8e3;
+	padding: 10px 15px;
+
+	button {
+		@include AlgBtn();
+		box-shadow:none !important;
+		border:1px solid transparent;
+
+		&:hover {
+			background-color: #FFF;
+			color:$text-dark;
+			border: 1px solid #d4d8e3;
+			box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2) !important;
+		}
+	}
+
+	.topic-admin-delete button {
+		color: $radical-red;
+
+		&:hover{
+			color: darken($radical-red,10%);
+		}
+	}
+}
+
+.post-admin-menu {
+	border-radius: 4px;
+	box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+	border: 1px solid #d4d8e3;
+	padding: 10px 15px;
+
+	li {
+		@include AlgBtn();
+		box-shadow:none;
+
+		&:hover {
+			background-color: #FFF;
+			color:$text-dark;
+			box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+		}
+	}
+}
+
+.timeline-controls button {
+	@include AlgBtn();
+	box-shadow:none;
+
+	&:hover {
+		color:$text-dark;
+		background-color: #FFF;
+	}
+}
+
+.show-topic-admin {
+	@include AlgBtn();
+
+	&:hover {
+		color:$text-dark;
+		background-color: #FFF;
+	}
+}
+
+.post-controls {
+
+	.actions {
+
+		.delete {
+			color:$radical-red;
+			border-bottom: 2px solid transparent;
+
+			&:hover {
+				color:$radical-red;
+				background-color: #FFF;
+				border-bottom: 2px solid $radical-red;
+			}
+		}
+
+		.share,
+		.edit,
+		.create-flag,
+		.bookmark,
+		.show-post-admin-menu,
+		.show-more-actions {
+			color:$text-light;
+			background-color: transparent;
+			border-bottom: 2px solid transparent;
+
+			&:hover {
+				color:$text-dark;
+				background-color: transparent;
+				border-bottom: 2px solid $royal-blue;
+			}
+		}
+
+		.reply {
+			opacity: 1;
+			color:$text-dark;
+			border-bottom: 2px solid transparent;
+
+			&:hover {
+				border-bottom: 2px solid $royal-blue;
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+@keyframes ShowFadeShareTopic{
+	0%{
+		opacity:0;
+		transform:translate(0,-16px);
+	}
+	100%{
+		opacity: 1;
+		transform:translate(0,0);
+	}
+}
+
+#share-link {
+	border-radius: 4px;
+	box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+	border: 1px solid #d4d8e3;
+	padding: 10px 15px;
+
+	&.visible{
+		animation:ShowFadeShareTopic 200ms ease-in-out forwards;
+	}
+
+	input {
+		width:83% !important;
+		@include AlgInput();
+	}
+
+	.reply-as-new-topic{
+		a {
+			padding: 9px 12px;
+			color:$text-light;
+
+			&:hover {
+				color:$text-dark;
+			}
+		}
+	}
+
+	.close-share{
+		a{
+			display: inline-block;
+			transform:scale(.7);
+			color:$text-light;
+
+			&:hover{
+				color:$text-dark;
+				transform:scale(.8);
+			}
+		}
+	}
+
+	.social-link {
+
+		a {
+			color:$text-light;
+
+			&:hover {
+				color: #0088cc;
+			}
+		}
+	}
+}
+
+#topic-title .title-wrapper h1 {
+  line-height: 1.4em;
+}

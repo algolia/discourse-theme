@@ -1,0 +1,111 @@
+//
+// Topic editing
+// 
+
+.select2-drop-active {
+	border:1px solid #d4d8e3;
+}
+
+.select2-results {
+
+	.badge-category-bg {
+		border-radius:6px;
+		width: 6px;
+		height: 6px;
+	}
+}
+
+.select2-results .select2-highlighted {
+	background-color: rgba(0,0,0,.05);
+}
+
+#topic-title {
+
+	.submit-edit {
+		@include AlgBtn();
+		color: $shamrock;
+		background-color: #FFF;
+		padding: 15px 18px;
+		border: 1px solid transparent;
+		box-shadow:none;
+
+		&:hover {
+			background-color: $shamrock;
+			border: 1px solid transparent;
+			color: white;
+		}
+	}
+
+	.cancel-edit {
+		@include AlgBtn();
+		color: $radical-red;
+		background-color: white;
+		padding: 15px 18px;
+		border: 1px solid transparent;
+		box-shadow:none;
+
+		&:hover {
+			background-color: $radical-red;
+			border: 1px solid transparent;
+			color: white;
+		}
+	}
+
+	#edit-title {
+		width: 300px;
+		@include AlgLineInput();
+		border-left:none;
+		border-right:none;
+		border-top:none;
+		border-radius:0;
+		box-shadow:none;
+		font-size: 14px;
+
+		&:focus {
+			box-shadow:none;
+			border-bottom: 2px solid #d4d8e3;
+			border-left:none;
+			border-right:none;
+			border-top:none;			
+		}
+	}
+
+	.select2-container-active {
+		border-color: transparent;
+		box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+
+		.select2-choice {
+			border-color:#d4d8e3;
+		}
+	}
+
+	.select2-container {
+		border: solid 1px #d4d8e3;
+	}
+
+	.select2-choice {
+		@include AlgLineInput();
+		border:none;
+
+		&:focus {
+			box-shadow: none;
+		}
+		
+		.select2-arrow b {
+			background-position: 0 8px;
+		}
+	}
+}
+
+.timeline-controls {
+
+	button {
+		padding: 9px 12px;
+		border-radius:4px;
+	}
+
+	[arial-label="topic admin actions"] {
+		background-color: #FFF;
+		color:$text-light;
+	}
+}

@@ -1,0 +1,48 @@
+.period-chooser {
+
+	#period-popup {
+		border-radius: 4px;
+		box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+		border: 1px solid #d4d8e3;
+		padding: 10px 15px;
+
+		ul li {
+			border-bottom: 2px solid transparent;
+
+			&:hover {
+				background-color: #FFF;
+				border-bottom: 2px solid $radical-red;
+			}
+		}
+	}
+}
+
+@keyframes ShowDropDown {
+	0%{
+		opacity:0;
+		transform:translate(0,16px);
+	}
+	100%{
+		opacity: 1;
+		transform:translate(0,0);
+	}
+}
+
+.open > .dropdown-menu{
+	animation: ShowDropDown 200ms ease-in-out forwards;
+}
+.dropdown-menu {
+	border-radius: 4px;
+	box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+	border: 1px solid #d4d8e3;
+	padding: 10px 15px;
+
+	li > a {
+		border-bottom: 2px solid transparent;
+
+		&:hover {
+			background-color: #FFF;
+			border-bottom: 2px solid $radical-red;
+		}
+	}
+}

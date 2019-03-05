@@ -1,0 +1,195 @@
+.nav.nav-pills {
+
+	> li {
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		a {
+			color:$text-light;
+			padding: 5px 0;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 600;
+
+			&:hover {
+				color:#3e464c;
+				background-color: #FFF;
+			}
+		}
+
+		&.active {
+
+			a {
+				color:#3e464c;
+				background-color: #FFF;
+				border-bottom: 3px solid #fe336f;
+			}
+		}
+	}
+}
+
+.list-controls {
+	.nav {
+		margin: 6px 0 0 0;
+	}
+
+	.btn{
+		padding: 9px 16px;
+		box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+		background-color: #FFF;
+		border: solid 1px #d4d8e3;
+		color: $text-light;
+		text-transform: uppercase;
+		font-size:12px;
+		border-radius: 4px;
+
+		&:hover {
+			color: #3e464c;
+		}
+
+		i.fa.fa-plus {
+			display: none;
+		}
+	}
+
+	.category-dropdown-menu {
+		left: 0;
+		top: 95%;
+		width: 100%;
+		left: -1px;
+		border-left: solid 1px #d4d8e3;
+		border-top: solid 1px transparent;
+		border-right: solid 1px #d4d8e3;
+		border-bottom: solid 1px #d4d8e3;
+		box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+		min-width: 0;
+		border-radius: 0 0 4px 4px;
+
+
+		.cat {
+			padding: 3px 5px;
+
+			a {
+				color:$text-light;
+
+				span.badge-category {
+					color:$text-light !important;
+				}
+			}
+
+			.badge-category-bg {
+				width: 6px;
+				height: 6px;
+				border-radius:100%;
+				transform:translate(0,3px);
+			}
+		}
+	}
+
+	.category-breadcrumb {
+
+	}
+
+	.category-breadcrumb li.bullet > .badge-category {
+		background: transparent !important;
+		color: $text-light !important;
+		&:hover{
+			color:#3e464c !important;
+		}
+	}
+
+	.category-breadcrumb li.bullet>.dropdown-header {
+    background: inherit;
+    color: #7c8a94;
+    padding: 0px 4px;
+	}
+
+	.category-breadcrumb li.bullet>.dropdown-header:hover {
+    color: black;
+	}
+
+	.no-category,
+	.has-drop {
+		position: relative;
+		padding: 9px 16px;
+		box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+		background-color: #FFF;
+		border: solid 1px #d4d8e3;
+		text-transform: uppercase;
+		font-size:12px;
+		border-radius: 4px;
+
+		a.badge-category{
+			background-color: transparent !important;
+			padding: 0;
+			font-size: 12px;
+
+			.badge-category-bg{
+				border-radius:100%;
+			}
+
+			&.category-dropdown-button{
+				padding: 0;
+				display: none;
+			}
+
+			&:hover{
+				background-color: transparent !important;
+			}
+		}
+
+		&:hover {
+			color: #3e464c;
+		}
+	}
+}
+
+.notification-options {
+
+	.dropdown-menu {
+		top:36px;
+		border:solid 1px #d4d8e3;
+		box-shadow: 0 1px 1px 0 rgba(85, 95, 110, 0.2);
+		border-radius:4px;
+
+		a{
+			&:hover{
+				background-color: rgba(0,0,0,.03);
+			}
+		}
+
+		.disabled{
+			a{
+				cursor:not-allowed;
+				opacity: .5;
+				background-color: rgba(0,0,0,.1);
+			}
+		}
+	}
+}
+
+#banner {
+	padding: 20px 25px;
+
+	h1 {
+		margin-bottom:10px;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.badge-category-bg {
+	border-radius:100%;
+}
+
+
+ol.category-breadcrumb {
+	// Fixes the empty <li> element under list view- categories
+	li:empty {
+		display: none;
+	}
+}
